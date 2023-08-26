@@ -2,23 +2,23 @@ package br.com.fiap.domain.entity;
 
 public class Estilo {
 
-    private long id;
+    private Long id;
 
     private String nome;
 
     public Estilo() {
     }
 
-    public Estilo(long id, String nome) {
+    public Estilo(Long id, String nome) {
         this.id = id;
         this.nome = nome;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public Estilo setId(long id) {
+    public Estilo setId(Long id) {
         this.id = id;
         return this;
     }

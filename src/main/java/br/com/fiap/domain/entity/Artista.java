@@ -4,24 +4,24 @@ import java.util.Set;
 
 public class Artista {
 
-    private long id;
+    private Long id;
 
     private String nome;
 
     public Artista() {
     }
 
-    public Artista(long id, String nome, Set<Musica> musicas) {
+    public Artista(Long id, String nome) {
         this.id = id;
         this.nome = nome;
 
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public Artista setId(long id) {
+    public Artista setId(Long id) {
         this.id = id;
         return this;
     }

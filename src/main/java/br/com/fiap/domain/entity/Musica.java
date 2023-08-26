@@ -2,11 +2,12 @@ package br.com.fiap.domain.entity;
 
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class Musica {
 
-    private long id;
+    private Long id;
     private String nome;
     private Estilo estilo;
     private Set<Artista> artistas = new HashSet<>();
@@ -14,18 +15,18 @@ public class Musica {
     public Musica() {
     }
 
-    public Musica(long id, String nome, Estilo estilo, Set<Artista> artistas) {
+    public Musica(Long id, String nome, Estilo estilo, Set<Artista> artistas) {
         this.id = id;
         this.nome = nome;
         this.estilo = estilo;
-        this.artistas = artistas;
+        this.artistas = Objects.isNull(artistas) ? new HashSet<>():artistas;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public Musica setId(long id) {
+    public Musica setId(Long id) {
         this.id = id;
         return this;
     }
